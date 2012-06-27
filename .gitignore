@@ -13,6 +13,6 @@
 # Ignore all logfiles and tempfiles.
 /log/*.log
 /tmp
-
+duo_test_info.yml
 
 */config/database.yml
