@@ -16,13 +16,11 @@ class DuoRestTest < Test::Unit::TestCase
   
   def test_connection
     connection = DuoRest::Connection.new(API_HOSTNAME, API_INTEGRATION_KEY, API_SECRET_KEY).ping
-    #assert_equal("OK", connection["stat"])
     assert_equal({"response" => "pong", "stat" => "OK"}, connection)
   end
   
   def test_check
     check = DuoRest::Connection.new(API_HOSTNAME, API_INTEGRATION_KEY, API_SECRET_KEY).check
-    #assert_equal("OK", check["stat"])
     assert_equal({"response" => "valid", "stat" => "OK"}, check)
   end
   
@@ -53,7 +51,7 @@ class DuoRestTest < Test::Unit::TestCase
   end
   
   
-  # So far this is not working as expected.
+  # So far this is not working as expected and ignored for now since it isn't a requirement
   # def test_delayed_auth
   #   auth = DuoRest::Connection.new(API_HOSTNAME, API_INTEGRATION_KEY, API_SECRET_KEY).auth(API_USERNAME, "push1", {async: true})
   #   assert_equal("OK", auth["stat"])
@@ -67,7 +65,7 @@ class DuoRestTest < Test::Unit::TestCase
   
   #used to check for a delayed auth
   def test_status
-    #TODO
+    #TODO once delayed auth is working
   end
   
 end
