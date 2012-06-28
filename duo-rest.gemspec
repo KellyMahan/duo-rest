@@ -7,7 +7,7 @@ Gem::Specification.new do |s|
   s.name        = 'duo-rest'
   s.version     = DuoRest::VERSION
   s.platform    = Gem::Platform::RUBY
-  s.date        = '2012-06-27'
+  s.date        = '2012-06-28'
   s.summary     = "Duo Security Rest Api"
   s.description = "Gem interface for Duo security rest api"
   s.authors     = ["Kelly Mahan"]
