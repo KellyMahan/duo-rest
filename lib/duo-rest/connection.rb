@@ -82,7 +82,7 @@ module DuoRest
     end
     
     def to_query(hash)
-      puts hash
+      #puts hash
       hash.map{|k,v| "#{k}=#{CGI.escape(v)}"}.join("&")
     end
     
